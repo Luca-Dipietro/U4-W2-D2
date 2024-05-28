@@ -15,12 +15,17 @@ public class Main {
         List<Integer> listaDuplicataInversa = generaListaDuplicataInversa(listaCasuale);
         System.out.println("Lista Duplicata e Inversa: " + listaDuplicataInversa);
 
-        System.out.println("Lista valori in posizione pari: ");
-        stampaPariDispari(listaCasuale, true);
+        System.out.println("Inserisci true per vedere la lista dei valori in posizione pari o false per vedere quella dei valori in posizione dispari");
+        boolean valore = Boolean.parseBoolean(sc.nextLine());
 
-        System.out.println("Lista valori in posizione dispari: ");
-        stampaPariDispari(listaCasuale, false);
-
+        if (valore) {
+            System.out.println("Lista valori in posizione pari: ");
+            stampaPariDispari(listaCasuale, true);
+        } else {
+            System.out.println("Lista valori in posizione dispari: ");
+            stampaPariDispari(listaCasuale, false);
+        }
+        
         sc.close();
     }
 
@@ -54,7 +59,7 @@ public class Main {
         for (int i = pari ? 0 : 1; i < lista.size(); i += 2) {
             System.out.println(lista.get(i));
         }
-        
+
     }
 
 }

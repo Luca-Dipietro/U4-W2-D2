@@ -19,10 +19,8 @@ public class Main {
             System.out.println("Inserisci una parola");
             String parola = sc.nextLine();
 
-            if (elencoParoleDistinte.contains(parola)) {
+            if (!elencoParoleDistinte.add(parola)) {
                 elencoParoleDuplicate.add(parola);
-            } else {
-                elencoParoleDistinte.add(parola);
             }
 
         }
